@@ -6,19 +6,18 @@ import java.util.Scanner;
 public class Exam2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int year, month;
+		int[] days = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // 배열을 맞추기 위해서 -1 추가함
 
 		System.out.print("년도랑 월을 입력하삼요: ");
-		int year = sc.nextInt();
-		int month = sc.nextInt();
-		int[] daysInMonth = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		int date;
+		year = sc.nextInt();
+		month = sc.nextInt();
+		sc.close();
 
-		if (month == 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
-			date = 29;
-		} else {
-			date = daysInMonth[month - 1];
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+			days[2] = 29;
 		}
 
-		System.out.println(year + "년 " + month + "월 의 마지막 일자는 " + date + "일임");
+		System.out.printf("%d 년 %d 월의 마지막 일자는 %d 일임", year, month, days[month]);
 	}
 }
