@@ -23,8 +23,8 @@ public class TimeTest {
 //		System.out.println("time1 : " + t1.currentTime());
 //		System.out.println("time2 : " + t2.currentTime());
 //		System.out.println("time3 : " + t3.currentTime());
-		Time[] timeArr;
-		timeArr = new Time[3];
+		Time[] timeArr; // 레퍼런스 배열변수
+		timeArr = new Time[3]; // 레퍼런스 배열 생성
 
 		timeArr[0] = new Time();
 		timeArr[1] = new Time();
