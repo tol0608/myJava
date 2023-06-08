@@ -29,15 +29,17 @@ import java.util.Scanner;
 */
 public class Exam1 {
 	public static void main(String[] args) {
+		FloatToInteger fti = new FloatToInteger();
 		Scanner sc = new Scanner(System.in);
+		double num;
 
-		System.out.print("\n하나의 실수를 입력하세요: ");
-		double number = sc.nextDouble();
-		int down = (int) Math.floor(number);
-		int hup = (int) Math.round(number);
-		int up = (int) Math.ceil(number);
+		System.out.print("하나의 실수를 입력하삼요 : ");
+		num = sc.nextDouble();
 		sc.close();
 
-		System.out.println("\n버림: " + down + "\n반올림: " + hup + "\n올림: " + up);
+		fti.setNum(num);
+		System.out.println("버림 : " + fti.floor());
+		System.out.println("반올림 : " + fti.round());
+		System.out.println("올림 : " + fti.ceil());
 	}
 }
